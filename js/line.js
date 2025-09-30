@@ -25,7 +25,7 @@
             .domain(d3.extent(parsedData, d => d.Year))
             .range([0, width]);
 
-        // Y scale (['Average Price (notTas-Snowy)'] price)
+        // Y scale Average Price
         const y = d3.scaleLinear()
             .domain([0, d3.max(parsedData, d => d['Average Price (notTas-Snowy)'])]).nice()
             .range([height, 0]);
@@ -51,7 +51,7 @@
             .attr("x", -height / 2)
             .attr("y", -60)
             .attr("text-anchor", "middle")
-            .text("['Average Price (notTas-Snowy)'] Spot Price");
+            .text("Average Price ($/MWh)");
 
         // Line generator
         const line = d3.line()
