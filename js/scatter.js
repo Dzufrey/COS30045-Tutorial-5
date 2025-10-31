@@ -14,7 +14,7 @@ const svg = d3.select("#scatterplot")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 // Load the CSV data
-d3.csv("Ex5/Ex5_Tv_energy.csv").then(data => {
+d3.csv("Ex5/Ex5_TV_energy.csv").then(data => {
     // Parse numeric values
     data.forEach(d => {
         d.star2 = +d.star2;
